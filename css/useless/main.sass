@@ -1,0 +1,249 @@
+@import colors
+
+  
+  // *
+  // -webkit-box-sizing: border-box
+  // -moz-box-sizing: border-box
+  // box-sizing: border-box
+  // &&:before, &&:after
+  //   -webkit-box-sizing: border-box
+  //   -moz-box-sizing: border-box
+  //   box-sizing: border-box
+
+body
+  background-color: #fff
+  background-color: $green
+
+ul
+  padding: 0
+  margin: 0
+  li
+    list-style: none
+
+a
+  text-decoration: none
+
+//  header and content code 
+
+header
+  position: fixed
+  padding: 10px 0
+  z-index: 20
+  width: 100%
+  nav
+    transition: all 0.3s ease
+    ul
+      display: flex
+      flex-direction: row
+      justify-content: flex-end
+      li
+        margin: 0 5px
+        text-align: center
+        width: 150px
+        a
+          display: block
+          padding: 10px 0
+          font-family: "Lato", sans-serif
+          font-weight: 300
+          font-size: 20px
+          color: #274b81
+          border: 3px solid transparent
+          transition: all 0.3s ease
+          background-color: #fff5
+          &:hover
+            font-weight: 500
+            border: 3px solid $green
+            box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.16)
+            transition: all 0.3s ease
+  a.active
+    font-weight: 500
+    border: 3px solid $green
+    box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.16)
+    transition: all 0.3s ease
+
+#welcome a
+  font-weight: 500
+  border: 3px solid $green
+  box-shadow: 5px 5px 0 0 rgba(0, 0, 0, 0.16)
+  transition: all 0.3s ease
+
+header nav ul li a:active, #welcome a:active
+  transform: translate(2px, 2px)
+  box-shadow: 0 0 0 0 transparent
+
+
+.left-col, .right-col
+  position: fixed
+  width: 200px
+  height: 100vh
+  z-index: 19
+  outline: 1px solid red
+
+.left-col
+  display: flex
+  align-items: flex-end
+  justify-content: center
+  top: 0
+  left: 0
+  text-align: center
+  border-right: 3px solid $green
+  li
+    margin: 10px 0
+  a
+    width: 200px
+    font-size: 30px
+    color: #274b81
+    i
+      transition: all 0.3s ease
+    &:link, &:visited
+      color: #274b81
+    i:hover
+      transform: scale(1.25)
+      color: $green
+
+.right-col
+  top: 0
+  right: 0
+  overflow: hidden
+  p
+    position: absolute
+    bottom: 0
+    left: -21px
+    font-size: 250px
+    margin: 0
+    font-family: "Lato", sans-serif
+    font-weight: 900
+    color: $green
+    writing-mode: vertical-rl
+    transform: rotate(180deg)
+    text-shadow: -5px -5px 0 rgba(0, 0, 0, 0.16)
+
+main
+  position: relative
+  display: flex
+  flex-direction: column
+
+section
+  position: relative
+  padding: 0 10px
+  transition: all 0.3s ease
+
+  min-height: 100vh
+
+@media screen and (min-width: 320px)
+  section
+    display: none
+
+@media screen and (min-width: 576px)
+  section
+    display: none
+
+
+@media screen and (min-width: 968px)
+  //     
+   // 		todo: navigation ok
+   // 		todo: fix the content + the image for #welcome  
+  header nav
+    max-width: 768px
+    margin: 0 auto
+  section
+    display: block
+    width: 768px
+    margin: 0 auto
+  .left-col
+    width: 100px
+  .right-col
+    width: 100px
+    p
+      font-size: 150px
+
+@media screen and (min-width: 1296px)
+  // @media screen and (min-width: 996px){ 
+  header nav
+    max-width: 996px
+    margin: 0 auto
+  section
+    width: 996px
+    margin: 0 auto
+  .left-col
+    width: 150px
+  .right-col
+    width: 150px
+    p
+      font-size: 200px
+
+// @media screen and (min-width: 1250px){} 
+@media screen and (min-width: 1650px)
+  header nav
+    max-width: 1250px
+    margin: 0 auto
+  section
+    width: 1250px
+    // margin: 0 auto; 
+  .left-col
+    width: 200px
+  .right-col
+    width: 200px
+    p
+      position: absolute
+      bottom: 0
+      left: -21px
+      font-size: 250px
+
+@media screen and (min-width: 2000px)
+
+// welcome section
+// welcome section
+// welcome section
+
+#welcome
+  display: flex
+  flex-direction: column
+  justify-content: center
+  // background-color: #c002; 
+  border-bottom: 10px solid $green
+  h1
+    font-size: 70px
+    font-family: "Lato", sans-serif
+    font-weight: 700
+    margin-bottom: 30px
+    span
+      font-family: "Abril Fatface", cursive
+      font-weight: 400
+  p
+    line-height: 45px
+    font-family: "Lato", sans-serif
+    font-weight: 100
+    font-size: 30px
+    margin-bottom: 30px
+  a
+    display: inline-block
+    font-family: "Lato", sans-serif
+    font-weight: 300
+    font-size: 30px
+    padding: 13px 30px
+    color: $green
+    // border: 3px solid $green; 
+    transition: all 0.3s ease
+    // box-shadow: 5px 5px 0 0 rgba(0,0,0,.16); 
+  img
+    position: absolute
+    bottom: 0
+    right: 0
+    height: 650px
+    z-index: -1
+
+// skill section
+// skill section
+// skill section
+
+#skills .skill-title-thumb
+  position: relative
+  font-family: "Lato", sans-serif
+  font-weight: 900
+  font-size: 50px
+  &::before
+    position: absolute
+    bottom: -20px
+    left: 0
+    background-color: $green
