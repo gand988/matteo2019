@@ -498,32 +498,40 @@ input:invalid {
 /* DEBUG RULES */
 /* DEBUG RULES */
 /* DEBUG RULES */
+/*
+
 @media screen and (min-width: 320px) {
-  header nav {
-    display: none; }
-
-  section {
-    width: 100%; }
-
-  .left-col {
-    display: none; }
-
-  .right-col {
-    width: 70px; }
-    .right-col p {
-      font-size: 100px;
-      margin: 0; }
-
-  #welcome {
-    display: block; }
-    #welcome h1 {
-      font-size: 50px; }
-
-  #progetti,
-  #skills,
+  // you will see the navigation bar for the mobile 
+  header nav{
+    display: none; 
+  }
+  section{
+    width: 100%; 
+  }
+  .left-col{
+    display: none; 
+  }
+  .right-col{
+    width: 70px; 
+    p{
+      font-size: 100px; 
+      margin: 0; 
+    }
+  }
+  #welcome{
+    display: block; 
+    h1{
+      font-size: 50px; 
+    }
+  }
+  #progetti, 
+  #skills, 
   #resumé,
-  #contatti {
-    display: none; } }
+  #contatti{
+    // display: none; 
+  }
+}
+*/
 /* @media screen and (min-width: 768px){} */
 @media screen and (min-width: 968px) and (max-width: 1295px) {
   header nav {
